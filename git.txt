@@ -1,0 +1,94 @@
+how to configure Git — whether you're just getting started or setting up a fresh environment.
+    You usually configure Git with your username and email, so it can track who makes commits.
+
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+
+        --global applies the config to all your Git projects.
+        --You can drop --global if you want to set it only for the current repo.
+
+🔍 Check your current config
+git config --list
+git config user.name
+git config user.email
+
+Clone and status:
+    Clone is a repository on your local machine.
+git clone <some link>   
+
+    status displays status of code.
+git status
+
+main branch : main brach is the branch which is created on github.
+master: when creating the local repo, where we initialize git init, same will become master branch
+
+untracked file: untracked files are those file, which is not yet noticed or tracked by git.
+modified file : changed
+staged : ready to commit
+unmodified: unchanged
+
+add and commit:
+    add-
+        adds new or chnaged files in to your working directory to the staging areas.
+git add <-file name->
+git add .   
+
+    commit-
+        it is the record of change
+git commit -m "messages"
+
+The process which we have done till here is basically executed locally, but for applying the changes on git hub, we have to fire another command.
+push: upload local repo content to remote repo
+git push origin main
+
+origin-github repo , main branch
+Note----------------------------------------------------------------------------------------------------------------------------------------------
+ In above scenario , first repo was created on github.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Note---------------------------------------------------------------------------------------------------------------------------------------------
+If the folder is created on your local repo
+-------------------------------------------------------------------------------------------------------------------------------------------------
+init command-->> used to create a new git repo.
+    git init
+    git remote add origin <-link->
+    git remote -v (to verify remote)
+    git branch(to check the branch)
+    git branch -M main (to rename branch)
+    git push origin main(push the main branch (earlier master) to origin)
+master: when creating the local repo, where we initialize git init, same will become master branch.
+change the master repo name to main by firing the below command
+git branch -M main
+
+create a repo on github , where you will push your code.
+add the remote origin by copying the ssh location on repo for example:git@github.com:ashish222148/localrepotest.git
+
+branch commands:
+    git branch(to check the branch)
+    git brach -M main(to rename branch)
+    git checkout <-branch name-> (to navigate)
+    git checkout -b <-new branch name->
+    git branch -d <-branch name-> (to delete branch)
+
+Merging code:
+way -1
+git diff <branch name> (to compare commits branches files and more)
+git merge <-branch name> (to merge 2 branches)
+
+way-2
+create a PR 
+ PR(Pull Request)->It lets you tell others about changes you have pushed to a branch in a repository on GitHub.
+
+
+
+ Pull Command:
+ git pull origin main
+
+used to fetch and download content from a remote repo and imediately update the localrepo to match that content.
+
+
+fork:
+is a new repository that shares code and visibility setting with the original "upstream" repository
+fork is a rough copy
